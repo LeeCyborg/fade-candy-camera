@@ -2,20 +2,10 @@ import processing.video.*;
 int cellSize = 1;
 int cols, rows;
 Capture video;
-
 OPC opc;
 float dx, dy;
-
-void setup()
-{
+void setup() {
   size(240, 240);
-  frameRate(30);
-  cols = width / cellSize;
-  rows = height / cellSize;
-  colorMode(RGB, 255, 255, 255, 100);
-  video = new Capture(this, width, height);
-  video.start();  
-
   background(0);
   opc = new OPC(this, "127.0.0.1", 7890);
   float spacing = height / 10.0;
@@ -58,3 +48,4 @@ void video() {
     }
   }
 }
+
